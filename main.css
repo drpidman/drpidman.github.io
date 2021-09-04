@@ -1,0 +1,105 @@
+body {
+  background-color: #1d1d1d;
+}
+
+.top.header {
+  width: auto;
+  height: auto;
+  padding: 0.55rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgb(94, 118, 250);
+}
+
+.top.header .top.tile {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  color: white;
+}
+
+.top.header .top.tile h1 {
+  width: auto;
+  font-weight: bolder;
+  margin: 0;
+  margin-block-end: 0;
+}
+
+@media (max-width: 720px) {
+  .top.header {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .top.header .top.tile {
+    width: 65%;
+  }
+}
+
+
+.top.bottom {
+  width: auto;
+  height: auto;
+  padding: 0.55rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgb(94, 118, 250);
+
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.top.bottom .languages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  margin: 0.6rem;
+}
+
+.top.bottom .languages .lang-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.top.bottom .languages svg {
+  font-size: 40px;
+  margin: 5px;
+  text-align: center;
+  padding: 0.1rem;
+}
+
+.top.bottom .discord-profile {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: -150px;
+  align-items: center;
+  font-weight: bolder;
+  color: white;
+}
+
+.top.bottom .discord-profile img {
+  width: 100%;
+  border-radius: 100rem;
+  margin: 10px;
+
+
+  animation-name: rot;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+  transition: all 5s ease-in-out;
+}
