@@ -1,59 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS only -->
 
+  <!-- CSS only -->
   <!--
   <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
   <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
   <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
   -->
-
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  
+  <link rel="stylesheet" type="text/css" href="./node_modules/@drkryzproject/html-navbar/css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/card/card.css">
 
-<title>Drk Profile</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <title>Drk Profile</title>
 </head>
+
 <body>
-  <header class="top header shadow">
-    <div class="top tile">
-      <h1>👋 Hello World</h1>
-      <span>My name is Caio and i'm a junior developer.</span>
+  <header class="header">
+    <div class="item">
+      <a onclick="OpenSideBar()" id="sidebtn">
+        <i class="fas fa-bars"></i>
+      </a>
     </div>
-  </header>
-  <header class="top bottom">
-    <div class="languages">
-      <h1 style="color: white; margin: 0.5rem;">Skills</h1>
-      <div class="lang-item">
-        <i class="fab fa-html5" style="color: rgb(255, 123, 0);"></i>
-        <i class="fab fa-js-square" style="color: yellow;"></i>
-        <i class="fab fa-css3" style="color: lightblue"></i>
-        <i class="fab fa-react" style="color: lightblue;"></i>
-      </div>
-      <h1 style="color: white; margin: 0.5rem;">Contact</h1>
-      <div class="lang-item">
-        <a role="button" href="https://github.com/drpidman">
-          <i class="fab fa-github" id="fa-git" role="button" style="color: #444;"></i>
+    <div class="item">
+      <div class="social">
+        <a href="https://www.instagram.com/cainhooo_tobias/">
+          <i class="fab fa-instagram"></i>
         </a>
-        <a role="button" href="https://discord.com/invite">
-          <i class="fab fa-discord"id="fa-discord" style="color: #444;"></i>
-        </a>
-        <a role="button" href="https://drkryz.xyz">
-          <i class="fas fa-globe" style="color: #444;"></i>
-        </a>
-      </div>
-      <div class="discord-profile">
-        <img src="https://cdn.discordapp.com/avatars/696425896600535110/1426697c9edd96118f3fdae89cc096fa"/>
-        <h1>DRK#1000</h1>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
       </div>
     </div>
+    <div class="item">
+      <a onclick="ChangeTheme()">
+        <i class="far fa-moon" id="icon"></i>
+      </a>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/cainhooo_tobias/">Instagram</a>
+        </li>
+        <li>
+          <a href="youlink">Discord</a>
+        </li>
+        <li>
+          <a href="https://github.com/drpidman">Github</a>
+        </li>
+      </ul>
+    </div>
   </header>
-  <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <div class="box-profile--area">
+    <div class="card" id="profile-project">
+      <div class="card-title-img">
+        <img src="https://media.discordapp.net/attachments/754023612956278935/874808051381698590/20210810_211432.png">
+      </div>
+      <div class="card-body--bottom-of-title">
+        <span>Drkry'z</span>
+      </div>
+      <div class="card-body--bottom-of-title-social">
+        <a class="item" href="https://github.com/Drkryz">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="item" href="https://twitter.com/drkryzproject">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="card-body">
+        <span>
+          Project profile on github, just to publish open-source projects.
+          It's free for everyone.
+        </span>
+      </div>
+    </div>
+    <div class="card" id="profile-project">
+      <div class="card-title-img">
+        <img src="https://cdn.discordapp.com/avatars/696425896600535110/6b8f130e6f443204f7dd49f6ea78e9b3.png?size=128">
+      </div>
+      <div class="card-body--bottom-of-title">
+        <span>DRK</span>
+      </div>
+      <div class="card-body--bottom-of-title-social">
+        <a class="item" href="https://github.com/drpdiman">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="item" href="https://www.instagram.com/cainhooo_tobias">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="card-body">
+        <span>
+          Junior programmer, studying on information security and design. 
+          <br>
+          Knowledge in html, css, nodejs and a little in Java.
+        </span>
+      </div>
+    </div>
+  </div>
+  <script src="./node_modules/@drkryzproject/html-navbar/js/script.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

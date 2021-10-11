@@ -1,0 +1,13 @@
+{
+    "name": "@drkryz-libs/html-navbar",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": {
+        "name": "DRK"
+    },
+
+    "dependencies": {
+        "jquery": "^3.6.0"
+    },
+    "license": "MIT"
+}

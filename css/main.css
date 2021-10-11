@@ -1,0 +1,44 @@
+:root {
+  /* box colors */
+  --default-bg: #fff;
+  --dark-bg: #222;
+
+  /* box properties */
+  --box-padding: 0.5rem;
+  --box-margin: 0.5rem;
+  --box-radius: 20px;
+  --box-shadow-sha: 1px 1px 20px rgba(12, 1, 1, 0.445);
+  --box-shadow-2d: -1px -1px rgba(12, 1, 1, 0.445);
+
+  /* text color */  
+  --default-text: #fff;
+  --default-dark: darkgray;
+
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--default-bg);
+}
+
+
+.box-profile--area {
+  display: flex;
+  flex-direction: row;
+  margin: var(--box-margin);
+  padding: var(--box-padding);
+}
+
+@media (max-width: 720px) {
+  .box-profile--area {
+    flex-direction: column;
+  }
+}
+

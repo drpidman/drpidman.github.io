@@ -1,0 +1,149 @@
+@import url('/fonts/Noto_Sans_Display/static/NotoSansDisplay_Condensed/NotoSansDisplay_Condensed-Bold.ttf');
+
+* {
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    transition: 500ms;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: -1px -1px 20px rgba(0, 0, 0, 0.534);
+    padding: 0.5rem;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.header .item {
+    padding: 0.5rem;
+}
+
+.header .item i {
+    padding: 0.5rem;
+    margin: 0.1rem;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.header .item i:hover {
+    background-color: rgb(235, 235, 235);
+    color: rgb(66, 148, 255);
+}
+
+.header .item .social {
+    display: flex;
+    flex-direction: row;
+}
+
+.header .item .social i {
+    color: darkgray;
+    transition: all 100ms ease-in-out;
+}
+
+
+.header .sidebar {
+    width: 15%;
+    display: none;
+    float: left;
+    top: 5.5rem;
+    left: 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 20px 20px rgba(0, 0, 0, 0.534);
+    position: fixed;
+
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    animation-name: opening;
+}
+
+@media (max-width: 720px) {
+    .header .sidebar {
+        animation-name: opening-min;
+    }
+
+    @keyframes opening-min {
+        from {
+            left: -10rem;
+            width: 0;
+        }
+
+        to {
+            left: 1rem;
+            width: 50%;
+        }
+    }
+
+    @keyframes closing-min {
+        from {
+            left: 1rem;
+            width: 50%;
+        }
+
+        to {
+            left: -10rem;
+            width: 0;
+        }
+    }
+}
+
+@keyframes opening {
+    from {
+        left: -10rem;
+        width: 0;
+    }
+
+    to {
+        left: 1rem;
+        width: 15%;
+    }
+}
+
+@keyframes closing {
+    from {
+        left: 1rem;
+        width: 15%;
+    }
+
+    to {
+        left: -10rem;
+        width: 0;
+    }
+}
+
+
+.header .sidebar ul {
+    width: auto;
+    height: auto;
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+    min-width: 0%;
+    padding: 0.5rem;
+    color: darkgray;
+}
+
+.header .sidebar ul li {
+    width: auto;
+    height: auto;
+    display: flex;
+    min-width: 0%;
+    justify-content: center;
+    margin: 0.3rem;
+    padding: 0.5rem;
+}
+
+.header .sidebar ul li a {
+    text-decoration: none;
+    color: darkgray;
+    transition: 200ms;
+}
+
+.header .sidebar ul li a:hover {
+    color:rgb(66, 148, 255);
+}
