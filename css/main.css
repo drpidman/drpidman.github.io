@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    color: #b7b7b7;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.container {
+    position: relative;
+
+}
+
+.pt-1 {
+    padding-top: 1rem
+}
+
+
+.pt-2 {
+    padding-top: 2rem
+}
+
+.pt-3 {
+    padding-top: 3rem
+}
+
+.mt-1 {
+    margin-top: 1rem
+}
+
+
+.mt-2 {
+    margin-top: 2rem
+}
+
+.mt-3 {
+    margin-top: 3rem
+}
+
+.mt-4 {
+    margin-top: 4rem
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.user-profile {
+    display: flex;
+    width: 30%;
+    border-radius: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    flex-direction: column;
+    column-gap: .5rem;
+    border: 0.5px solid gray;
+
+    text-align: center;
+}
+
+
+@media (max-width: 1340px) {
+    .user-profile {
+        width: 95%;
+    }
+}
+
+@media (max-width: 990px) {
+    .user-profile {
+        width: 95%;
+    }
+}
+
+@media (max-width: 720px) {
+    .user-profile {
+        width: 95%;
+    }
+}
+
+
+.user-profile img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.user-profile .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100px;
+    flex-wrap: wrap;
+}
+
+.button-themed {
+    position: relative;
+    height: min-content;
+    border: 0.5px solid gray;
+    margin: .5rem;
+    padding: 1.5rem 1.5rem;
+
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: .5rem;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: bold;
+
+    transition: 500ms ease-in-out;
+}
+
+.button-themed:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+
+    transition: 500ms ease-in-out;
+}
+
+.button-themed:hover::before {
+    width: 100%;
+}
+
+.button-themed:hover {
+    color: #000;
+}
+
+
+.github-stats img {
+    width: 100%;
+    border-radius: 0;
+}
