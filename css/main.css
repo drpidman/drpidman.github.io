@@ -13,6 +13,14 @@ body {
     color: #b7b7b7;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .flex {
     display: flex;
 }
